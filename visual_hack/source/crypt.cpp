@@ -7,7 +7,7 @@ std::vector<BYTE> crypt::decrypt_data(std::vector<BYTE> buff)
 	DATA_BLOB data_verify;
 	
 	data_out.pbData = buff.data();
-	data_out.cbData = buff.size();
+	data_out.cbData = static_cast<DWORD>(buff.size());
 
 	if (!::CryptUnprotectData(
 		&data_out,
@@ -65,7 +65,7 @@ std::vector<BYTE> crypt::crypt_data(std::vector<BYTE> buff)
 	DATA_BLOB data_out;
 	
 	data_in.pbData = buff.data();
-	data_in.cbData = buff.size();
+	data_in.cbData = static_cast<DWORD>(buff.size());
 	
 	
 	if (!::CryptProtectData(

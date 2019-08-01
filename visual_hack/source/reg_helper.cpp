@@ -37,7 +37,7 @@ std::vector<BYTE> reg_helper::get_data() const
 {
 
 	std::vector<BYTE> buff(4096);
-	DWORD size = buff.size();
+	DWORD size = static_cast<DWORD>(buff.size());
 
 	if (::RegQueryValueEx(reinterpret_cast<HKEY>(this->h_key_ptr_.get()), 
 		L"", 
@@ -62,7 +62,7 @@ void reg_helper::set_data(const std::vector<BYTE> & buff) const
 		0, 
 		REG_BINARY, 
 		buff.data(),
-		buff.size()) != ERROR_SUCCESS)
+		static_cast<DWORD>(buff.size())) != ERROR_SUCCESS)
 	{
 		throw error::c_win_api_exception(L"Error RegOpenKeyEx!", ::GetLastError());
 	}

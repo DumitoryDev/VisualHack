@@ -28,9 +28,9 @@ namespace mtl
 		std::cout << "Old date - " << data_nums[0].i << " " << data_nums[1].i << " " << data_nums[2].i << std::endl;
 		auto date_data = mtl::time::get_date();
 
-		data_nums[0].i = date_data[0];
-		data_nums[1].i = date_data[1];
-		data_nums[2].i = date_data[2];
+		data_nums[0].i = static_cast<int>(date_data[0]);
+		data_nums[1].i = static_cast<int>(date_data[1]);
+		data_nums[2].i = static_cast<int>(date_data[2]);
 
 		data_nums[1].i++; // increment of the month
 
