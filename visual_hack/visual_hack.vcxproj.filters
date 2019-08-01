@@ -33,7 +33,10 @@
     <ClCompile Include="source\engine.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="source\time.cpp">
+    <ClCompile Include="source\crypt_visual_date.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\time_info.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>
@@ -50,10 +53,13 @@
     <ClInclude Include="source\crypt.h">
       <Filter>source</Filter>
     </ClInclude>
-    <ClInclude Include="source\time.h">
+    <ClInclude Include="source\engine.h">
       <Filter>source</Filter>
     </ClInclude>
-    <ClInclude Include="source\engine.h">
+    <ClInclude Include="source\crypt_visual_date.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\time_info.h">
       <Filter>source</Filter>
     </ClInclude>
   </ItemGroup>

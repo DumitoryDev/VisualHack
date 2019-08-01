@@ -170,9 +170,10 @@
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <ClCompile Include="source\crypt.cpp" />
+    <ClCompile Include="source\crypt_visual_date.cpp" />
     <ClCompile Include="source\engine.cpp" />
     <ClCompile Include="source\reg_helper.cpp" />
-    <ClCompile Include="source\time.cpp" />
+    <ClCompile Include="source\time_info.cpp" />
     <ClCompile Include="visual_hack.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
@@ -183,10 +184,11 @@
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="source\crypt.h" />
+    <ClInclude Include="source\crypt_visual_date.h" />
     <ClInclude Include="source\exception.h" />
     <ClInclude Include="source\engine.h" />
     <ClInclude Include="source\reg_helper.h" />
-    <ClInclude Include="source\time.h" />
+    <ClInclude Include="source\time_info.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

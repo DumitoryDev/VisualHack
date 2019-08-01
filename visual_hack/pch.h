@@ -10,5 +10,6 @@
 #include <map>
 #include <Wincrypt.h>
 #include <ctime>
+#include <time.h>
 #include <iomanip>
 #include <fstream>

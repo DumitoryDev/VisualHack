@@ -1,12 +1,9 @@
 ﻿// visual_hack.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
 
 #include "pch.h"
 
 #include "source/engine.h"
 #include "source/exception.h"
-#include "source/time.h"
-
 
 int main(const int argc, char* argv[]) noexcept
 {
@@ -18,16 +15,17 @@ int main(const int argc, char* argv[]) noexcept
 		}
 				
 		mtl::engine::funcs.at(argv[1])();
-		
-		
+				
 	}
 	catch (const error::c_win_api_exception & er)
 	{
+
 		std::wcout << er.GetMessageW() <<std::endl;
 		
 	}
 	catch(...)
 	{
+
 		std::cout << "Error!" << std::endl;
 		
 	}

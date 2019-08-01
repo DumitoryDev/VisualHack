@@ -15,11 +15,15 @@ namespace mtl
 		engine(void) = delete;
 		~engine(void) = delete;
 
-		static void get_verison(void);
+		static void show_version(void);
+		static void show_now_date(void);
+		static size_t show_menu(void);
 		static map_func funcs;
 	private:
 		static void update_date(void);
 		static std::string version_;
 		
 	};
+
+	
 }

@@ -4,27 +4,33 @@
 class crypt
 {
 public:
-
-	union num
-	{
-		BYTE byte[2];
-		int i;
-	};
-
+	~crypt(void) = default;
 	crypt(const crypt& other) = delete;
 	crypt(crypt&& other) noexcept = delete;
 	crypt& operator=(const crypt& other) = delete;
 	crypt& operator=(crypt&& other) noexcept = delete;
 
-	crypt(void) = delete;
-	~crypt(void) = delete;
+	explicit crypt(std::vector<BYTE> data) :data_(std::move(data)) {
 
-	static std::vector<BYTE> decrypt_data(std::vector<BYTE> buff);
-	static std::vector<num> get_nums(const std::vector<BYTE>& data);
-	static void change_num(std::vector<BYTE>& buff, const std::vector<crypt::num>& nums);
-	static std::vector<BYTE> crypt_data(std::vector<BYTE> buff);
-	
-private:
+
+	}
+
+	explicit crypt(const std::string& data) :data_{ data.cbegin(),data.cend() }
+	{
+
+	}
+
+
+
+	void decrypt_data(void);
+	void crypt_data(void);
+	const auto & get_data(void) const noexcept 
+	{
+		return this->data_;
+	}
+
+protected:
+	std::vector<BYTE> data_{};
 
 };
 
